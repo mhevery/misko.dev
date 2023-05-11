@@ -39,3 +39,6 @@ lerna-debug.log*
 !.yarn/releases
 .history
 src/routes/live
+
+# Cloudflare
+functions/**/*.js
