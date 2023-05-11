@@ -1,0 +1,12 @@
+[
+  { "id": "backbone_js", "name": "Backbone.js", "year": 2010 },
+  { "id": "knockout_js", "name": "Knockout.js", "year": 2010 },
+  { "id": "angular_js", "name": "AngularJS", "year": 2010 },
+  { "id": "ember_js", "name": "Ember.js", "year": 2011 },
+  { "id": "react", "name": "React", "year": 2013 },
+  { "id": "vue_js", "name": "Vue.js", "year": 2014 },
+  { "id": "angular", "name": "Angular", "year": 2016 },
+  { "id": "svelte", "name": "Svelte", "year": 2016 },
+  { "id": "solid_js", "name": "SolidJS", "year": 2020 },
+  { "id": "qwik", "name": "Qwik", "year": 2022 }
+]
