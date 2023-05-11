@@ -27,6 +27,7 @@ export default component$(() => {
       <MUISlider
         min={2010}
         max={2023}
+        marks
         value={year.value}
         valueLabelDisplay="on"
         onChange$={(_, value) => {
