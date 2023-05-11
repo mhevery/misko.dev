@@ -1,17 +1,17 @@
 import { component$, useComputed$, useSignal } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
-import { readFile } from "fs/promises";
 import { type Framework } from "./frameworks";
 import { FwTable, MUISlider } from "./react";
+import frameworks from "./frameworks.json";
 
 export const useFrameworks = routeLoader$(async () => {
-  const frameworksFileContent = await readFile(
-    "./src/routes/BeJS-23/frameworks.json",
-    "utf-8"
-  );
-  const frameworks = JSON.parse(frameworksFileContent) as Framework[];
+  // const frameworksFileContent = await readFile(
+  //   "./src/routes/BeJS-23/frameworks.json",
+  //   "utf-8"
+  // );
+  // const frameworks = JSON.parse(frameworksFileContent) as Framework[];
   console.log("Read", frameworks.length, "frameworks");
-  return frameworks;
+  return frameworks as Framework[];
 });
 
 export default component$(() => {
@@ -23,7 +23,11 @@ export default component$(() => {
   });
   return (
     <div style={{ margin: "2em" }}>
-      <input type="number" bind:value={year} />
+      <input
+        type="number"
+        value={year.value}
+        onChange$={(_, e) => (year.value = Number(e.value))}
+      />
       <MUISlider
         min={2010}
         max={2023}

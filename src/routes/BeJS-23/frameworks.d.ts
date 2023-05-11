@@ -3,4 +3,5 @@ export interface Framework {
   name: string;
   year: number;
 }
-export const data: Framework[];
+type Frameworks = Framework[];
+export default Frameworks;
